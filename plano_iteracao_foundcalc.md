@@ -3,11 +3,11 @@
 ## Contexto
 
 O documento de arquitetura do FundCalc define uma aplicação **SaaS** de
-cálculo de fundações com **arquitetura hexagona. Essa arquitetura
+cálculo de fundações com arquitetura hexagona. Essa arquitetura
 separa o sistema em quatro _bounded contexts_ (Negócio, Cálculo, Análise
 Técnica e Sincronização) para reduzir o acoplamento entre domínios e
 facilitar a evolução independente de cada módulo. Cada
-contexto possui **portas de entrada** (APIs HTTP, eventos, webhooks,
+contexto possui portas de entrada(APIs HTTP, eventos, webhooks,
 gRPC) e portas de saída (persistência, mensageria) com separação de
 comandos e consultas via *QRS. O objetivo principal
 é manter o cálculo desacoplado, modularizar por domínio e garantir
@@ -29,7 +29,7 @@ principais módulos e preparar a entrega da arquitetura.
   suporte offline e sincronização de eventos】.  
 - Garantir rastreabilidade e auditoria, registrando eventos e
   gerenciando quotas de uso
-- Gerar documentação** (diagrama de componentes, modelos de dados e
+- Gerar documentação (diagrama de componentes, modelos de dados e
   relatório técnico).
 
 ## Itens de trabalho e cronograma
@@ -69,10 +69,10 @@ durante a execução.
 
 ## Riscos e estratégias de mitigação
 
-- **Complexidade dos algoritmos de cálculo** – as fórmulas geotécnicas
+- Complexidade dos algoritmos de cálculo – as fórmulas geotécnicas
   podem ser extensas. Começar com casos simples (sapatas isoladas) e
   validar os resultados com exemplos de engenharia.  
-  *Integração de pagamentos – depender de gateways externos pode gerar
+  Integração de pagamentos – depender de gateways externos pode gerar
   atrasos; utilizar sandbox de pagamento e simular callbacks para
   desenvolver o módulo Negócio.  
 - Conflitos de sincronização – divergências de dados entre o banco
